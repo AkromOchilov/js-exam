@@ -18,10 +18,16 @@ console.log(reversedString(str));
 // ------------------------------
 // ------------------------------
 function isEven(number) {
-	if (number % 2 === 0) {
-		return true;
+	if (typeof number === 'number') {
+		if (number % 2 === 0) {
+			return true;
+		} else {
+			return false;
+		}
 	} else {
-		return false;
+		throw new Error(
+			"Sizdan son kiritish so'ralgan edi. Manfiy bo'lsa ham ularni ham juftlikka tekshirish mumkin.",
+		);
 	}
 }
-console.log(isEven(23));
+console.log(isEven(24));
